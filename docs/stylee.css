@@ -1,0 +1,114 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Mode Rapi */
+body.rapi {
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+/* Header Styles */
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Sub-Heading Styles */
+h3 {
+  font-size: 1.1em;
+  margin-top: 20px;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+}
+h3::after {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  transition: transform 0.3s;
+}
+h3.active::after {
+  transform: rotate(180deg);
+}
+
+/* Content Styles */
+.content {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  display: block;
+  transition: opacity 0.3s;
+}
+.content.hidden {
+  display: none;
+}
+
+/* Button Styles */
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+.toggle-button:hover {
+  background-color: #555;
+}
+
+/* Icon Styles */
+.toggle-icon {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+body.berantakan .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Mode Berantakan */
+body.berantakan {
+  background-color: #ff66b2;
+  color: #32ff7e;
+  font-family: 'Comic Sans MS', cursive;
+}
